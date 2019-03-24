@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+
+		<title>test webrtc</title>
+		<style>
+		 
+			video {
+				background-image: url('static/css/wait.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				z-index: 999999;
+				background-color: #f5f3f3;
+      	max-width: 100%;
+			}
+
+			.col-lg-6 {
+				margin: 30px;
+				padding: 10px;
+				background-color: #f5f3f3;
+				border-radius: 15px 15px 15px 15px;
+				z-index: 999999;
+			}
+
+			html,	body {
+				margin: 0;
+ 				padding: 0;
+				background-color: #66b3ff;
+			}
+
+			.background {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			}
+
+
+			.row {
+				flex-wrap: nowrap;
+			}
+
+		</style>
+
+	</head>
+	
+	<body>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				Particles.init({
+					selector: '.background',
+					connectParticles: 'true',
+					color: '#0099ff',
+					speed: '0.8',
+					sizeVariations: '5',
+					maxParticles: '50'
+
+				});
+			};
+		</script>
+
+		<div class="jumbotron text-center">
+			<h1>WebRTC from dumb students</h1>
+			<p>Video chat with your friends</p>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6" align="center">
+					<h3>You</h3>   
+					<video id="localVideo" autoplay playsinline muted></video>  
+				</div>
+				<div class="col-lg-6" align="center">
+					<h3>Your friend</h3>   
+					<video id="remoteVideo" autoplay playsinline></video> 
+				 </div>
+			</div>
+
+		</div>
+
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="static/js/script.js"></script>
+
+		<canvas class="background"></canvas>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" crossorigin="anonymous"></script>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
